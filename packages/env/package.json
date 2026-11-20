@@ -1,0 +1,12 @@
+{
+  "name": "@news-aggrigator/env",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./env.ts"
+  },
+  "dependencies": {
+    "zod": "^4.6.7"
+  }
+}
