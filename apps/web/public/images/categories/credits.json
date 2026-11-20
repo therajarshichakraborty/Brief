@@ -1,0 +1,68 @@
+{
+  "world": {
+    "title": "Newyork Nyc",
+    "creator": "Joseph Barrientos",
+    "license": "cc0",
+    "source": "https://stocksnap.io/photo/newyork-nyc-5D32YBOFBF"
+  },
+  "india": {
+    "title": "Free India Gate image",
+    "creator": null,
+    "license": "cc0",
+    "source": "https://www.rawpixel.com/image/5906484/free-india-gate-image-public-domain-cc0-photo"
+  },
+  "business": {
+    "title": "Trading Panel on Laptop",
+    "creator": null,
+    "license": "cc0",
+    "source": "https://www.rawpixel.com/image/5968900/trading-panel-laptop"
+  },
+  "technology": {
+    "title": "Code Coding",
+    "creator": "Negative Space",
+    "license": "cc0",
+    "source": "https://stocksnap.io/photo/code-coding-FSPLFPQBCZ"
+  },
+  "politics": {
+    "title": "Houses Parliament. Located London, England",
+    "creator": null,
+    "license": "cc0",
+    "source": "https://www.rawpixel.com/image/3370281/free-photo-image-architecture-big-ben-building"
+  },
+  "sports": {
+    "title": "Free football stadium image",
+    "creator": null,
+    "license": "cc0",
+    "source": "https://www.rawpixel.com/image/5921160/photo-image-light-public-domain-green"
+  },
+  "cricket": {
+    "title": "Cricket game. Headingley, Leeds, UK",
+    "creator": null,
+    "license": "cc0",
+    "source": "https://www.rawpixel.com/image/11101921/image-person-grass-baseball"
+  },
+  "health": {
+    "title": "Stethoscope Medical",
+    "creator": "Negative Space",
+    "license": "cc0",
+    "source": "https://stocksnap.io/photo/stethoscope-medical-9M1HWW2JFV"
+  },
+  "entertainment": {
+    "title": "Crowd People",
+    "creator": "Anthony Delanoix",
+    "license": "cc0",
+    "source": "https://stocksnap.io/photo/crowd-people-IUJP9OI22I"
+  },
+  "bangla": {
+    "title": "Kolkata Durgapujo",
+    "creator": "Subrata Sadhukhan",
+    "license": "cc0",
+    "source": "https://wordpress.org/photos/photo/8546312fd3/"
+  },
+  "science": {
+    "title": "CBP Laboratories Scientific Services (LSS)",
+    "creator": null,
+    "license": "cc0",
+    "source": "https://www.rawpixel.com/image/8726731/photo-image-border-public-domain"
+  }
+}
