@@ -1,0 +1,224 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-dm-sans), var(--font-bengali-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-display: var(--font-newsreader), var(--font-bengali-serif), ui-serif, Georgia, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@theme {
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --animate-fade-up: fade-up 0.6s var(--ease-out-expo) both;
+  --animate-fade-in: fade-in 0.45s ease-out both;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-heart-pop: heart-pop 0.45s var(--ease-spring);
+  --animate-dot-in: dot-in 0.35s var(--ease-spring) both;
+  --animate-shimmer: shimmer 1.6s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes heart-pop {
+    0% {
+      transform: scale(1);
+    }
+    40% {
+      transform: scale(1.35);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes dot-in {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes shimmer {
+    from {
+      background-position: 200% 0;
+    }
+    to {
+      background-position: -200% 0;
+    }
+  }
+}
+
+:root {
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.52 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+}
+
+/*
+ * Dark theme: a soft, cool-grey palette tuned for long reading sessions.
+ * The UI is written against the neutral scale, so the scale itself is remapped:
+ * low numbers become raised surfaces and high numbers become (off-white) text.
+ * Nothing is pure black or pure white, which keeps contrast comfortable.
+ */
+.dark {
+  color-scheme: dark;
+
+  --color-neutral-50: oklch(0.215 0.008 260);
+  --color-neutral-100: oklch(0.25 0.009 260);
+  --color-neutral-200: oklch(0.3 0.01 260);
+  --color-neutral-300: oklch(0.38 0.011 260);
+  --color-neutral-400: oklch(0.57 0.012 260);
+  --color-neutral-500: oklch(0.68 0.011 260);
+  --color-neutral-600: oklch(0.76 0.009 260);
+  --color-neutral-700: oklch(0.83 0.007 260);
+  --color-neutral-800: oklch(0.885 0.006 260);
+  --color-neutral-900: oklch(0.93 0.005 260);
+  --color-neutral-950: oklch(0.96 0.004 260);
+
+  --color-red-500: oklch(0.68 0.19 24);
+
+  --background: oklch(0.18 0.007 260);
+  --foreground: oklch(0.93 0.005 260);
+  --card: oklch(0.215 0.008 260);
+  --card-foreground: oklch(0.93 0.005 260);
+  --popover: oklch(0.23 0.009 260);
+  --popover-foreground: oklch(0.93 0.005 260);
+  --primary: oklch(0.93 0.005 260);
+  --primary-foreground: oklch(0.2 0.008 260);
+  --secondary: oklch(0.25 0.009 260);
+  --secondary-foreground: oklch(0.93 0.005 260);
+  --muted: oklch(0.25 0.009 260);
+  --muted-foreground: oklch(0.68 0.011 260);
+  --accent: oklch(0.25 0.009 260);
+  --accent-foreground: oklch(0.93 0.005 260);
+  --destructive: oklch(0.7 0.17 24);
+  --border: oklch(0.3 0.01 260);
+  --input: oklch(0.3 0.01 260);
+  --ring: oklch(0.57 0.012 260);
+}
+
+/* Photos sit slightly dimmer in dark mode so they do not glare. */
+.dark img {
+  filter: brightness(0.92);
+}
+
+/* Applied for one frame while switching themes so colours change instantly. */
+.theme-switching,
+.theme-switching * {
+  transition: none !important;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    ::before,
+    ::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility scrollbar-none {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@utility skeleton {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-neutral-100),
+    var(--color-neutral-200),
+    var(--color-neutral-100)
+  );
+  background-size: 200% 100%;
+  animation: var(--animate-shimmer);
+}
