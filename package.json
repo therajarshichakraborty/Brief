@@ -1,0 +1,30 @@
+{
+  "name": "Brief",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "clean:modules": "node -e \"const fs=require('fs'),path=require('path');const walk=(dir)=>{for(const entry of fs.readdirSync(dir,{withFileTypes:true})){if(!entry.isDirectory()||entry.name==='.git')continue;const full=path.join(dir,entry.name);if(entry.name==='node_modules'){fs.rmSync(full,{recursive:true,force:true});console.log('removed',full);}else walk(full);}};walk('.');\"",
+    "check-types": "turbo run check-types",
+    "db:up": "docker compose up -d --wait",
+    "db:down": "docker compose down",
+    "db:generate": "pnpm --filter @api-sift db:generate",
+    "db:migrate": "pnpm --filter @api-sift db:migrate",
+    "db:studio": "pnpm --filter @api-sift db:studio"
+  },
+  "devDependencies": {
+    "eslint": "10.9.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
+    "prettier": "3.9.6",
+    "turbo": "^2.11.10",
+    "typescript": "7.0.2"
+  },
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24"
+  }
+}
